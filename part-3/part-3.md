@@ -12,22 +12,31 @@
 2. Lakukan Percobaan untuk membuat reference table + distribute tabel pada repo github altera citus demo
     1. start jalankan perintah ./reset.sh untuk memastikan tidak ada docker yang berjalan
     2. lakukan perintah docker compose up -d
-    ![Alt text](image.png)
-    3. kemudian jalankan ./populate.sh dijalankan untuk membuat reference table + distribute tabel pada database sehingga kita memiliki 4 table yaitu products,users,orders,order_details
-    ![Alt text](image-1.png)
-    4. Jalankan perintah ./inspect.sh
-    ![Alt text](image-2.png)
 
-3. Di node/ worker mana saja product Headphone tersimpan? Tunjukkan shard idnya
-    Dari perintah di gambar ini didapatkan table products berada pada shard id 102009
+        ![Alt text](image.png)
+
+    3. kemudian jalankan ./populate.sh dijalankan untuk membuat reference table + distribute tabel pada database sehingga kita memiliki 4 table yaitu products,users,orders,order_details
+
+        ![Alt text](image-1.png)
+
+    4. Jalankan perintah ./inspect.sh
+
+        ![Alt text](image-2.png)
+
+3. Di node/ worker mana saja product Headphone tersimpan? Tunjukkan shard idnya .Dari perintah di gambar ini didapatkan table products berada pada shard id 102009
+
     ![Alt text](image-3.png)
+
     Dari perintah di gambar di bawah ini untuk shard id 102009 terdapat di citus-demo_woker 1,2 dan 3
+
     ![Alt text](image-5.png)
     
-4. Di node/ worker mana saja order dengan id 13 tersimpan? Tunjukkan shard idnya
-    Dari perintah di gambar ini didapatkan table products berada pada shard id 102033
+4. Di node/ worker mana saja order dengan id 13 tersimpan? Tunjukkan shard idnya. Dari perintah di gambar ini didapatkan table products berada pada shard id 102033
+
     ![Alt text](image-6.png)
+
     Dari perintah di gambar di bawah ini untuk shard id 102033 terdapat di citus-demo_woker 3
+    
     ![Alt text](image-7.png)
 
 5. Kapan sebaiknya kita menggunakan replication?

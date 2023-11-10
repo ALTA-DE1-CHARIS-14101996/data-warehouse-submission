@@ -57,16 +57,26 @@
 
 4. Tuliskan setiap perintah dari proses instalasi citus menggunakan docker compose sampai tabel terbentuk, berikan juga tangkapan layar untuk setiap langkah dan hasilnya !
     1. Jalankan docker (Install jika belum ada) dan pastikan sudah terdapat postgre di dalamnya.
-    ![Alt text](image.png)
+
+        ![Alt text](image.png)
+
     2. Buat file docker-compose.yml sesuai di link https://github.com/citusdata/docker dan ubah beberapa data sesuai yang diinginkan.
-    ![Alt text](image-1.png)
+
+        ![Alt text](image-1.png)
+
     3. Jalankan file docker compose dengan perintah docker-compose -p citus up -d , kemudian cek di docker desktop untuk memastikan apakah container sudah terbuat.
-    ![Alt text](image-2.png)
-    ![Alt text](image-3.png)
+
+        ![Alt text](image-2.png)
+        
+        ![Alt text](image-3.png)
+
     4. Jalankan perintah docker exec -it <container_id> bash agar bisa menjalankan perintah di dalam container. Kemudian jalankan perintah psql -U <POSTGRES_USER> -d postgres agar bisa mengakses postgrenya. Jika sudah sesuai dengan image-4 maka sudah konek ke postgreSQL dan postgre di dalam docker siap dan bisa digunakan.
-    ![Alt text](image-4.png)
+
+        ![Alt text](image-4.png)
+
     5. Jalankan perintah 'create extension citus;' (tanpa tanda petik) untuk memasang extension citus pada container postgre dimana nanti akan muncul CREATE EXTENSION jika citus telah terpasang. Kemudian anda bisa mulai membuat tabel,contohnya seperti perintah pada gambar di bawah ini. Jika sukses akan muncul pemberitahuan CREATE TABLE jika tabel sudah sukses dibuat. Anda bisa melakukan pengecekan dengan perintah select * from <nama_tabel> untuk meastikan tabel tersebut telah terbentuk atau belum.
-    ![Alt text](image-5.png)
+
+        ![Alt text](image-5.png)
     
 
 5. Jelaskan Perbedaan antara access method heap dan columnar pada citus!
